@@ -7,6 +7,7 @@ import TimelineLog from './components/TimelineLog';
 import ToastContainer from './components/ToastContainer';
 import Footer from './components/Footer';
 import EmergencyOverlay from './components/EmergencyOverlay';
+import DarkVeil from './components/DarkVeil';
 
 const COMMANDS = {
   c: {
@@ -191,6 +192,7 @@ function App() {
 
   return (
     <div className="app-layout">
+      <DarkVeil color="#00ff6a" warpAmount={0.8} speed={2} scanlineFrequency={2.5} />
       <Header
         activeKey={activeKey}
         onKeyClick={handleKeyClick}

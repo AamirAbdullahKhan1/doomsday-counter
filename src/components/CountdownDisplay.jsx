@@ -33,11 +33,11 @@ function DigitGroup({ value, label, isPaused, animate = true }) {
                     <AnimatePresence mode="popLayout">
                         <motion.span
                             key={value}
-                            initial={{ opacity: 0, scale: 0.8, y: 30, rotateX: -45 }}
-                            animate={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }}
-                            exit={{ opacity: 0, scale: 0.8, y: -30, rotateX: 45 }}
-                            transition={{ type: 'spring', stiffness: 200, damping: 20, mass: 1 }}
-                            style={{ display: 'inline-block', transformOrigin: 'center center' }}
+                            initial={{ opacity: 0, scale: 0.95, y: 15, filter: "blur(4px)" }}
+                            animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
+                            exit={{ opacity: 0, scale: 1.05, y: -15, filter: "blur(4px)", transition: { duration: 0.2 } }}
+                            transition={{ duration: 0.3, ease: 'easeOut' }}
+                            style={{ display: 'inline-block' }}
                         >
                             {value}
                         </motion.span>
